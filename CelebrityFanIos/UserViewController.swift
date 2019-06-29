@@ -34,6 +34,32 @@ class UserViewController: UIViewController {
     }
     
 
+    @IBAction func btnSubmit(_ sender: Any) {
+        
+        validator()
+    }
+    
+    func validator(){
+        if  let  sid =  studentIDtxt.text {
+            if  let  fName =  txtFirstName.text{
+                print("no first name")
+                if  let  lName =  txtLastName.text{
+//                    let sb = UIStoryboard(name: "Main", bundle: nil)
+//                    let  studentVC = sb.instantiateViewController(withIdentifier: "StudentVC") as! StudentViewController
+//
+//                    self.present(studentVC, animated: true, completion: nil)
+
+                                        let sb = UIStoryboard(name: "Main", bundle: nil)
+                                        let  studentVC = sb.instantiateViewController(withIdentifier: "StudentVC") as! StudentViewController
+                    
+                                        self.navigationController?.pushViewController(studentVC, animated: true)
+
+
+                }
+                
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
